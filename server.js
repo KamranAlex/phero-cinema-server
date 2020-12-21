@@ -26,7 +26,7 @@ const client = new MongoClient(uri, {
 client.connect((err) => {
   const moviesCollection = client.db('pheroCinema').collection('moviesList');
 
-  //Add new Service to database
+  //Add new Movie to database
   app.post('/addMovie', (req, res) => {
     const file = req.files.file;
     const title = req.body.title;
